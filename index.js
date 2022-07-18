@@ -23,6 +23,7 @@ client.on("ready", async () => {
     console.log("checking price");
 
     const price = await getPrice(url);
+    console.log(price);
 
     if (price < prevPrice) {
       console.log("price changed");
@@ -37,7 +38,7 @@ client.on("ready", async () => {
       });
       prevPrice = price;
     }
-  }, 1000 * 60 * 10);
+  }, 1000 * 6);
 });
 
 client.login(token);
